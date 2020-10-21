@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ord="https://bskibski.com/ordertypes" xmlns:pur="https://bskibski.com/Purchase"
+    xmlns:cmn="https://bskibski.com/commontypes" xmlns:cust="https://bskibski.com/customertypes"
+    targetNamespace="https://bskibski.com/Purchase" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+
+    <xs:import schemaLocation="CommonTypes.xsd" namespace="https://bskibski.com/commontypes"/>
+    <xs:import schemaLocation="CustomerTypes.xsd" namespace="https://bskibski.com/customertypes"/>
+    <xs:import schemaLocation="OrderTypes.xsd" namespace="https://bskibski.com/ordertypes"/>
+
+    <xs:element name="Purchase">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="OrderDetail" type="ord:OrderType"/>
+                <xs:element name="PaymentMethod" type="cmn:PaymentMethodType"/>
+                <xs:element ref="pur:CustomerDetails"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CustomerDetails" type = "cust:CustomerType"></xs:element>
+</xs:schema>

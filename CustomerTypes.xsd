@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:cmn="https://bskibski.com/commontypes"
+    targetNamespace="https://bskibski.com/customertypes" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xs:import schemaLocation="CommonTypes.xsd" namespace="https://bskibski.com/commontypes"/>
+
+    <xs:complexType name="CustomerType">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="DeliveryAdress" type="cmn:AdressType"/>
+            <xs:element name="BillingAdress" type="cmn:AdressType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

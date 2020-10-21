@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:Purchase xmlns:xsi="http://www.w3.org/2001/XMLSchema" 
+    xsi:schemaLocation="https://bskibski.com/Purchase Main.xsd"
+    xmlns:p="https://bskibski.com/Purchase" xmlns:o="https://bskibski.com/ordertypes"
+    xmlns:c="https://bskibski.com/customertypes" xmlns:cmn="https://bskibski.com/commontypes">
+
+    <p:OrderDetail>
+        <o:Item>
+            <o:ProductName>Widget</o:ProductName>
+            <o:Quantity>1</o:Quantity>
+            <o:UnitPrice>3.42</o:UnitPrice>
+        </o:Item>
+    </p:OrderDetail>
+
+    <p:PaymentMethod>VISA</p:PaymentMethod>
+    <p:CustomerDetails>
+        <c:Name>Filipa</c:Name>
+        <c:DeliveryAdress>
+            <cmn:Line1>Ribeira 31</cmn:Line1>
+            <cmn:Line2>Porto</cmn:Line2>
+        </c:DeliveryAdress>
+        <c:BillingAdress>
+            <cmn:Line1>CAMPO CRL</cmn:Line1>
+            <cmn:Line2>valongo town</cmn:Line2>
+        </c:BillingAdress>
+    </p:CustomerDetails>
+
+</p:Purchase>
